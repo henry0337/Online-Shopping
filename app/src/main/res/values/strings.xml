@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">OnlineShopping</string>
+    <string name="intro_paragraph">
+        <font color="#000000">Satisfy your cravings with our</font>\n<font color="#854811">fresh cakes, donuts</font>\n<font color="#000000">and </font><font color="#854811">pastries</font>
+    </string>
+    <string name="intro_subtitle">
+        Browse the best edibles from top sellers\nGet personalized recommendations\nEnjoy fast, free shipping
+    </string>
+    <string name="introBtnTxt">Let\'s get started!</string>
+    <string name="intro_login">Already have an account? <font color="#854811">Sign in</font></string>
 </resources>
