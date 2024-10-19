@@ -8,4 +8,7 @@
     </string>
     <string name="introBtnTxt">Let\'s get started!</string>
     <string name="intro_login">Already have an account? <font color="#854811">Sign in</font></string>
+    <string name="display_name">Tom Johnson</string>
+    <string name="notification_count">1</string>
+    <string name="search_hint">Search anything...</string>
 </resources>
