@@ -14,10 +14,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AuthActivity"
+            android:name=".screens.AuthActivity"
             android:exported="false" />
         <activity
-            android:name=".IntroActivity"
+            android:name=".screens.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
