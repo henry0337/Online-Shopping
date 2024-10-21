@@ -57,6 +57,7 @@ dependencies {
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
+    implementation(libs.moshi.kotlin)
 
     // Glide
     implementation(libs.github.glide)

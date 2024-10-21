@@ -4,7 +4,9 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.view.WindowManager
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
