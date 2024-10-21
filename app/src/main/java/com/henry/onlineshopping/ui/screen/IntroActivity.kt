@@ -1,4 +1,4 @@
-package com.henry.onlineshopping.screens
+package com.henry.onlineshopping.ui.screen
 
 import android.content.Intent
 import android.graphics.Color

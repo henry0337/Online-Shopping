@@ -11,16 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShopping"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".screens.DashboardActivity"
+            android:name=".ui.screen.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.AuthActivity"
+            android:name=".ui.screen.AuthActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.IntroActivity"
+            android:name=".ui.screen.IntroActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
