@@ -3,7 +3,7 @@ package com.henry.onlineshopping.module
 import android.content.Context
 import com.henry.onlineshopping.R
 import com.henry.onlineshopping.annotation.BaseUrl
-import com.henry.onlineshopping.utility.NetworkConstant
+import com.henry.onlineshopping.utility.constant.NetworkConstant
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -37,11 +37,11 @@ object NetworkModule {
     @Singleton
     fun provideOkHttpClient(context: Context, baseUrl: String): OkHttpClient =
         if (baseUrl.startsWith("https")) {
-            val certInput = context.resources.openRawResource(R.raw.keystore)
+            val certInput = context.resources.openRawResource(R.raw.backend)
             val sslContext = SSLContext.getInstance("TLS")
 
             val keystore = KeyStore.getInstance("PKCS12").apply {
-                load(certInput, "your_keystore_password".toCharArray())
+                load(certInput, "23370000".toCharArray())
             }
 
             val trustManagerFactory =

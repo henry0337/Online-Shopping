@@ -1,4 +1,4 @@
-package com.henry.onlineshopping.utility
+package com.henry.onlineshopping.utility.constant
 
 object NetworkConstant {
     private const val IP_ADDRESS = "192.168.1.14"
