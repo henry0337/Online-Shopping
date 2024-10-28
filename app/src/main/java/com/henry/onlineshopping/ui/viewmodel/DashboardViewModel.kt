@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.henry.onlineshopping.data.model.Category
+import com.henry.onlineshopping.data.model.Item
 import com.henry.onlineshopping.data.model.Slider
 import com.henry.onlineshopping.data.repository.DashboardService
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,12 +14,13 @@ import retrofit2.Retrofit
 
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
-    private val retrofit: Retrofit
+    retrofit: Retrofit
 ) : ViewModel() {
 
     private val service = retrofit.create(DashboardService::class.java)
     val listOfSliders = MutableLiveData<List<Slider>>()
     val listOfCategories = MutableLiveData<List<Category>>()
+    val listOfItems = MutableLiveData<List<Item>>()
 
     fun fetchAllSlider() {
         viewModelScope.launch {
@@ -31,6 +33,13 @@ class DashboardViewModel @Inject constructor(
         viewModelScope.launch {
             val response = service.getAllCategories()
             listOfCategories.value = response.body()
+        }
+    }
+
+    fun fetchAllBestSeller() {
+        viewModelScope.launch {
+            val response = service.getAllBestSeller()
+            listOfItems.value = response.body()
         }
     }
 }

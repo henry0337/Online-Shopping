@@ -1,6 +1,6 @@
 package com.henry.onlineshopping.data.model
 
-class Item(
+data class Item(
     val title: String = "",
     val description: String = "",
     val pictureUrl: List<String> = listOf(),

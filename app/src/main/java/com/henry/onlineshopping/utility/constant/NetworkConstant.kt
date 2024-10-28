@@ -1,6 +1,7 @@
 package com.henry.onlineshopping.utility.constant
 
 object NetworkConstant {
+    // Change this constant based on your current IP address
     private const val IP_ADDRESS = "192.168.1.14"
 
     // HTTP

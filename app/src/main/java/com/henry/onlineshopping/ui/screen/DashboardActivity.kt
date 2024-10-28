@@ -11,12 +11,14 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import com.henry.onlineshopping.R
 import com.henry.onlineshopping.data.model.Slider
 import com.henry.onlineshopping.databinding.ActivityDashboardBinding
+import com.henry.onlineshopping.ui.adapter.BestSellerAdapter
 import com.henry.onlineshopping.ui.adapter.CategoryAdapter
 import com.henry.onlineshopping.ui.adapter.SliderAdapter
 import com.henry.onlineshopping.ui.viewmodel.DashboardViewModel
@@ -60,6 +62,7 @@ class DashboardActivity : AppCompatActivity() {
 
         getBanners()
         getCategories()
+        getBestSeller()
     }
 
     private fun getCategories() {
@@ -105,5 +108,15 @@ class DashboardActivity : AppCompatActivity() {
                 attachTo(binding.viewPager2)
             }
         }
+    }
+
+    private fun getBestSeller() {
+        binding.progressBarBs.visibility = View.VISIBLE
+        viewModel.listOfItems.observe(this) { items ->
+            binding.recyclerViewBs.layoutManager = GridLayoutManager(this, 2)
+            binding.recyclerViewBs.adapter = BestSellerAdapter(items)
+            binding.progressBarBs.visibility = View.GONE
+        }
+        viewModel.fetchAllBestSeller()
     }
 }
