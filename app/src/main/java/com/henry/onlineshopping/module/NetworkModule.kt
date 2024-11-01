@@ -25,7 +25,7 @@ object NetworkModule {
 
     @Provides
     @BaseUrl
-    fun baseBackendURL() = NetworkConstant.HTTP_URL
+    fun baseBackendURL() = NetworkConstant.HTTPS_URL
 
     @Provides
     @Singleton
