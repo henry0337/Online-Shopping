@@ -30,7 +30,7 @@ class BestSellerAdapter(
         val item = items[position]
         holder.binding.apply {
             titleTxt.text = item.title
-            priceTxt.text = "\$${item.price}"
+            priceTxt.text = "$${item.price}"
             ratingTxt.text = item.rating.toString()
 
             Glide.with(context)

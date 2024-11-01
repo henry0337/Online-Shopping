@@ -8,12 +8,12 @@ import retrofit2.http.GET
 
 interface DashboardService {
 
-    @GET("api/v1/banners")
+    @GET("api/v1/banner")
     suspend fun getAllSlider(): Response<List<Slider>>
 
-    @GET("api/v1/categories")
+    @GET("api/v1/category")
     suspend fun getAllCategories(): Response<List<Category>>
 
-    @GET("api/v1/products")
+    @GET("api/v1/product")
     suspend fun getAllBestSeller(): Response<List<Item>>
 }
