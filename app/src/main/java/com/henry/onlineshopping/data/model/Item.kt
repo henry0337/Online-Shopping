@@ -1,5 +1,9 @@
 package com.henry.onlineshopping.data.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Item(
     val title: String = "",
     val description: String = "",
@@ -7,9 +11,9 @@ data class Item(
     val size: List<String> = listOf(),
     val price: Double,
     val rating : Double,
-    val productFoundInCart: Int,
+    var cartProductCount: Int,
     val categoryId: Int,
     val sellerName: String,
     val sellerTel: Int,
     val sellerAvatar: String
-)
+) : Parcelable
