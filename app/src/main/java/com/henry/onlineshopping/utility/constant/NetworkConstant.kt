@@ -6,9 +6,9 @@ object NetworkConstant {
 
     // HTTP
     private const val HTTP_PORT = 8080
-    const val HTTP_URL = "http://$IP_ADDRESS:$HTTP_PORT/"
+    const val HTTP_URL = "http://$IP_ADDRESS:$HTTP_PORT"
 
     // HTTPS
     private const val HTTPS_PORT = 8443
-    const val HTTPS_URL = "https://$IP_ADDRESS:$HTTPS_PORT/"
+    const val HTTPS_URL = "https://$IP_ADDRESS:$HTTPS_PORT"
 }
