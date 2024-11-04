@@ -2,6 +2,7 @@ package com.henry.onlineshopping.ui.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.request.RequestOptions
 import com.henry.onlineshopping.data.model.Item
 import com.henry.onlineshopping.databinding.ViewholderBestSellerBinding
+import com.henry.onlineshopping.ui.screen.DetailActivity
 
 class BestSellerAdapter(
     private val items: List<Item>
@@ -40,7 +42,11 @@ class BestSellerAdapter(
         }
 
         holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailActivity::class.java).apply {
+                putExtra("object", item)
+            }
 
+            context.startActivity(intent)
         }
     }
 

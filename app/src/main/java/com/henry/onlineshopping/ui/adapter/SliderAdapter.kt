@@ -15,12 +15,10 @@ import com.henry.onlineshopping.R
 import com.henry.onlineshopping.data.model.Slider
 
 class SliderAdapter(
-    slider: List<Slider>,
-    viewPager2: ViewPager2
+    private val slider: List<Slider>,
+    private val viewPager: ViewPager2
 ) : RecyclerView.Adapter<SliderAdapter.ViewHolder>() {
 
-    private lateinit var slider: List<Slider>
-    private lateinit var viewPager: ViewPager2
     private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
