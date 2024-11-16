@@ -8,6 +8,4 @@ object Endpoint {
     const val REGISTER = "$BASE_REQUEST_URL/register"
     const val USER_INFO = "$BASE_REQUEST_URL/userinfo"
     const val CHANGE_PASSWORD = "$BASE_REQUEST_URL/changePassword"
-
-    //
 }

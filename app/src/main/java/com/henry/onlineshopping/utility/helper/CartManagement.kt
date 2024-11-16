@@ -7,7 +7,7 @@ import com.henry.onlineshopping.data.model.Item
 class CartManagement(
     val context: Context
 ) {
-    private val db = TinyDB(context)
+    private val db = CartLogicalHandler(context)
 
     suspend fun insertItem(item: Item) {
         val list = getListCart()
@@ -29,7 +29,7 @@ class CartManagement(
         }
 
         db.putListObject("CartList", list)
-        Toast.makeText(context, "Added to cart", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Added to cart!", Toast.LENGTH_SHORT).show()
     }
 
     suspend fun decreaseOrRemoveItem(list: MutableList<Item>, position: Int, listener: ChangeNumberOfItemsListener) {

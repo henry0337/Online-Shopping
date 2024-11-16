@@ -1,16 +1,16 @@
 package com.henry.onlineshopping.ui.viewmodel
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.henry.onlineshopping.data.model.Category
 import com.henry.onlineshopping.data.model.Item
 import com.henry.onlineshopping.data.model.Slider
 import com.henry.onlineshopping.data.repository.DashboardService
+import com.henry.onlineshopping.utility.alias.MLLD
 import dagger.hilt.android.lifecycle.HiltViewModel
-import jakarta.inject.Inject
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
+import javax.inject.Inject
 
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
@@ -18,9 +18,9 @@ class DashboardViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val service = retrofit.create(DashboardService::class.java)
-    val listOfSliders = MutableLiveData<List<Slider>>()
-    val listOfCategories = MutableLiveData<List<Category>>()
-    val listOfItems = MutableLiveData<List<Item>>()
+    val listOfSliders = MLLD<Slider>()
+    val listOfCategories = MLLD<Category>()
+    val listOfItems = MLLD<Item>()
 
     fun fetchAllSlider() {
         viewModelScope.launch {

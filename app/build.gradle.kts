@@ -59,8 +59,9 @@ dependencies {
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
-    // Retrofit (recommend for Kotlin)
+    // Retrofit
     implementation(libs.retrofit)
+    // Kotlin-specific dependencies, if you're using Java, i recommend Gson library and its Retrofit converter.
     implementation(libs.converter.moshi)
     implementation(libs.moshi.kotlin)
 
